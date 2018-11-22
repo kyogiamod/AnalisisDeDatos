@@ -1,3 +1,5 @@
 .Rapp.history
 *.pdf
 .DS_Store
+test.R
+*.txt
