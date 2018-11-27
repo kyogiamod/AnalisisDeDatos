@@ -1,10 +1,12 @@
 source("saveHistGraph.R")
 source("saveFreqGraph.R")
+source("saveRelationsGraph.R")
 data <- read.csv("wine.data", header=TRUE, sep=",")
 
 #summary(data)
-saveHistGraph(data)
-saveFreqGraph(data)
+#saveHistGraph(data)
+#saveFreqGraph(data)
+#saveRelationsGraph(data)
 
 #varianza, covarianza, 
 varianza <- c()
