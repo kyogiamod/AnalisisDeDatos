@@ -3,12 +3,12 @@ source("saveFreqGraph.R")
 source("saveRelationsGraph.R")
 data <- read.csv("wine.data", header=TRUE, sep=",")
 
-#summary(data)
-#saveHistGraph(data)
-#saveFreqGraph(data)
+summary(data)
+saveHistGraph(data)
+saveFreqGraph(data)
 #saveRelationsGraph(data)
 
-#varianza, covarianza, 
+#varianza, covarianza
 varianza <- c()
 coefvar <- c()
 promedio <- c()
@@ -24,17 +24,5 @@ coefvar <- coefVar(sqrt(varianza), promedio)
 
 #Se crean los graficos de los histogramas
 
-
-#names(data) <- NULL
-#correlacion <- round(cor(data), digits=2)
-#names(correlacion) <- NULL
-#correlacion
-
-#covarianza <- round(cov(data), digits=2)
-#write.csv(correlacion, "asd.txt", sep="\t")
-#test <- c()
-#for(i in 1:14)
-#{
-#    print(shapiro.test(data[,i]))
-#}
-
+correlacion <- round(cor(data), digits=2)
+covarianza <- round(cov(data), digits=2)
