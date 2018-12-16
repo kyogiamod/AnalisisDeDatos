@@ -17,7 +17,7 @@ for(j in 2:14)
     #se guarda una imagen de todos los row de la columna i
     jpeg(paste("img/outliers/", names(whole_data)[j], "-before", ".jpeg", sep=""))
     plot(whole_data[,j], ylim=c(min, max), xlab="Dato", ylab="Valor", main=names(whole_data)[j])
-    #Se establecen los limites coonsiderados normales. Fuera de esto es outlier
+    #Se establecen los limites considerados normales. Fuera de esto es outlier
     abline(h = rangeSup, col="red")
     abline(h = rangeInf, col="red")
     dev.off()
@@ -74,3 +74,59 @@ plot(fviz_cluster(object = km_clusters, data = data, show.clust.cent = TRUE, ell
         theme_bw()
 )
 dev.off()
+
+#Se añade la columna cluster para identificar el tipo de cluster al que pertenece
+data$cluster <- km_clusters$clustering
+
+#Se procede a hacer un analisis
+datacluster1 <- data[data$cluster == 1,]
+datacluster2 <- data[data$cluster == 2,]
+for(i in 1:14)
+{
+    x1 <- c(1:length(datacluster1[,i]))
+    x2 <- c(1:length(datacluster2[,i]))
+    y1 <- datacluster1[,i]
+    y2 <- datacluster2[,i]
+
+    jpeg(paste("img/groupDiff/", i, ".jpeg", sep=""))
+
+    if(length(x1) > length(x2))
+    {
+        plot(x1, y1, type="o", ylim=c( min(y1,y2), max(y1,y2) ), col="blue", pch=18)
+        lines(y2, col="red", pch=19)
+        legend(1, max(y1,y2), legend=c("Cluster 1", "Cluster 2"), col=c("blue", "red"), lty=1, cex=0.8)
+    }
+    else
+    {
+        plot(x2, y2, type="o", ylim=c( min(y1,y2), max(y1,y2) ), col="red", pch=19)
+        lines(y1, col="blue", pch=18)
+        #legend(1, max(y1,y2), legend=c("Cluster 2", "Cluster 1"), col=c("red", "blue"))
+    }
+    dev.off()
+}
+
+for(i in 1:14)
+{
+    x1 <- c(1:length(datacluster1[,i]))
+    x2 <- c(1:length(datacluster2[,i]))
+    y1 <- sort(datacluster1[,i])
+    y2 <- sort(datacluster2[,i])
+
+    jpeg(paste("img/groupDiffSorted/", i, ".jpeg", sep=""))
+    if(length(x1) > length(x2))
+    {
+        plot(x1, y1, type="b", ylim=c( min(y1,y2), max(y1,y2) ), col="blue")
+        lines(y2, col="red")
+        legend(1, max(y1,y2), legend=c("Cluster 1", "Cluster 2"), col=c("blue", "red"), lty=1, cex=0.8)
+    }
+    else
+    {
+        plot(x2, y2, type="b", ylim=c( min(y1,y2), max(y1,y2) ), col="red")
+        lines(y1, col="blue")
+        legend(1, max(y1,y2), legend=c("Cluster 2", "Cluster 1"), col=c("red", "blue"), lty=1, cex=0.8)
+    }
+    dev.off()
+}
+
+
+#Se muestra el summary para cada variable de ambos clusters
