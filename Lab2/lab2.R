@@ -92,15 +92,15 @@ for(i in 1:14)
 
     if(length(x1) > length(x2))
     {
-        plot(x1, y1, type="o", ylim=c( min(y1,y2), max(y1,y2) ), col="blue", pch=18)
+        plot(x1, y1, type="o", ylim=c( min(y1,y2), max(y1,y2) ), col="blue", pch=18, main=names(datacluster1)[i], xlab="Index", ylab="Value")
         lines(y2, col="red", pch=19)
         legend(1, max(y1,y2), legend=c("Cluster 1", "Cluster 2"), col=c("blue", "red"), lty=1, cex=0.8)
     }
     else
     {
-        plot(x2, y2, type="o", ylim=c( min(y1,y2), max(y1,y2) ), col="red", pch=19)
+        plot(x2, y2, type="o", ylim=c( min(y1,y2), max(y1,y2) ), col="red", pch=19, main=names(datacluster1)[i], xlab="Index", ylab="Value")
         lines(y1, col="blue", pch=18)
-        #legend(1, max(y1,y2), legend=c("Cluster 2", "Cluster 1"), col=c("red", "blue"))
+        legend(1, max(y1,y2), legend=c("Cluster 2", "Cluster 1"), col=c("red", "blue"))
     }
     dev.off()
 }
@@ -115,13 +115,13 @@ for(i in 1:14)
     jpeg(paste("img/groupDiffSorted/", i, ".jpeg", sep=""))
     if(length(x1) > length(x2))
     {
-        plot(x1, y1, type="b", ylim=c( min(y1,y2), max(y1,y2) ), col="blue")
+        plot(x1, y1, type="b", ylim=c( min(y1,y2), max(y1,y2) ), col="blue", main=names(datacluster1)[i], xlab="Index", ylab="Value")
         lines(y2, col="red")
         legend(1, max(y1,y2), legend=c("Cluster 1", "Cluster 2"), col=c("blue", "red"), lty=1, cex=0.8)
     }
     else
     {
-        plot(x2, y2, type="b", ylim=c( min(y1,y2), max(y1,y2) ), col="red")
+        plot(x2, y2, type="b", ylim=c( min(y1,y2), max(y1,y2) ), col="red", main=names(datacluster1)[i], xlab="Index", ylab="Value")
         lines(y1, col="blue")
         legend(1, max(y1,y2), legend=c("Cluster 2", "Cluster 1"), col=c("red", "blue"), lty=1, cex=0.8)
     }
@@ -129,4 +129,6 @@ for(i in 1:14)
 }
 
 
-#Se muestra el summary para cada variable de ambos clusters
+#Se guarda el summary para cada variable de ambos clusters
+#write.table(t(summary(datacluster1)), file="sum_datacluster1.csv")
+#write.table(t(summary(datacluster2)), file="sum_datacluster2.csv")
