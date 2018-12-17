@@ -34,7 +34,6 @@ for(j in 2:14)
 
 #Se eliminan los outliers
 data <- whole_data[-remove,]
-#data$Class.identifier <- NULL
 
 for(j in 2:14)
 {
@@ -130,5 +129,5 @@ for(i in 1:14)
 
 
 #Se guarda el summary para cada variable de ambos clusters
-#write.table(t(summary(datacluster1)), file="sum_datacluster1.csv")
-#write.table(t(summary(datacluster2)), file="sum_datacluster2.csv")
+write.table(t(summary(datacluster1)), file="sum_datacluster1.csv")
+write.table(t(summary(datacluster2)), file="sum_datacluster2.csv")
