@@ -303,11 +303,11 @@ data$Proline.alto <- as.factor(prolineAlto)
 levels(data$Class.identifier) <- factor(c("1", "2", "3"))
 
 rules <- apriori(as(data, "transactions"), parameter = list(minlen=2, support=0.01, confidence=0.5, maxlen=4))
-rules.sop <- sort(rules, by="support")
-rules.conf <- sort(rules, by="confidence")
-rules.lift <- sort(rules, by="lift")
+#rules.sop <- sort(rules, by="support")
+#rules.conf <- sort(rules, by="confidence")
+#rules.lift <- sort(rules, by="lift")
 
-write(rules, file="AsotiationRulesIntervals.csv", sep=",", quote=TRUE, row.names=FALSE)
+#write(rules, file="AsotiationRulesIntervals.csv", sep=",", quote=TRUE, row.names=FALSE)
 
 jpeg("img/matrixGroupedIntervals.jpeg")
 plot(rules, method="grouped")
@@ -315,4 +315,6 @@ dev.off()
 jpeg("img/headMatrixGroupedIntervals.jpeg")
 plot(head(rules, 100), method="grouped")
 dev.off()
-
+jpeg("img/TransactionsIntervals.jpeg")
+image(as(data, "transactions"), xlab="Items (columnas)", ylab="Transacciones (Filas)")
+dev.off()
