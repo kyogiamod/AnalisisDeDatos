@@ -1,7 +1,7 @@
 library("arules")
+library("arulesViz")
 
 data <- read.csv("wine.data", header=TRUE, sep=",")
-data2 <- read.csv("wine.data", header=TRUE, sep=",")
 
 #OBTENCIÓN DE REGLAS
 
@@ -110,9 +110,9 @@ prolineBajo <- integer(length(data[[1]]))
 prolineMedio <- integer(length(data[[1]]))
 prolineAlto <- integer(length(data[[1]]))
 
-
-for(i in length(data[[1]]))
+for(i in 1:length(data[[1]]))
 {
+    print(i)
     #Alcohol
     if(data[i,2] < 12.29) {
         alcoholBajo[i] <- 1
@@ -227,9 +227,11 @@ for(i in length(data[[1]]))
     } else if (data[i,14] < 1212.666) {
         prolineMedio[i] <- 1
     } else {
-        ProlineAlto[i] <- 1
+        prolineAlto[i] <- 1
     }
 }
+
+#stop()
 
 data$Class.identifier <- as.factor(data$Class.identifier)
 
@@ -249,9 +251,9 @@ data$Ash.medio <- as.factor(ashMedio)
 data$Ash.alto <- as.factor(ashAlto)
 
 data$Alkalinity.of.ash <- NULL
-data$Alkalinity.bajo <- as.factor(alkanilityBajo)
-data$Alkalinity.medio <- as.factor(alkanilityMedio)
-data$Alkalinity.alto <- as.factor(alkanilityAlto)
+data$Alkalinity.bajo <- as.factor( alkalinityBajo)
+data$Alkalinity.medio <- as.factor( alkalinityMedio)
+data$Alkalinity.alto <- as.factor( alkalinityAlto)
 
 data$Magnesium <- NULL
 data$Magnesium.bajo <- as.factor(magnesiumBajo)
@@ -298,11 +300,19 @@ data$Proline.bajo <- as.factor(prolineBajo)
 data$Proline.medio <- as.factor(prolineMedio)
 data$Proline.alto <- as.factor(prolineAlto)
 
-#levels(data$Class.identifier) <- factor(c("Class identifier=1", "Class identifier=2", "Class identifier=3"))
+levels(data$Class.identifier) <- factor(c("1", "2", "3"))
 
-rules <- apriori(data, parameter = list(minlen=2, support=0.01, confidence=0.5, maxlen=5), )
-
+rules <- apriori(as(data, "transactions"), parameter = list(minlen=2, support=0.01, confidence=0.5, maxlen=4))
 rules.sop <- sort(rules, by="support")
 rules.conf <- sort(rules, by="confidence")
 rules.lift <- sort(rules, by="lift")
+
+write(rules, file="AsotiationRulesIntervals.csv", sep=",", quote=TRUE, row.names=FALSE)
+
+jpeg("img/matrixGroupedIntervals.jpeg")
+plot(rules, method="grouped")
+dev.off()
+jpeg("img/headMatrixGroupedIntervals.jpeg")
+plot(head(rules, 100), method="grouped")
+dev.off()
 

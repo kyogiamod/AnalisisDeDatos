@@ -1,6 +1,5 @@
 .Rapp.history
-*.pdf
 .DS_Store
-test.R
 *.txt
-Lab2/img/outliers
+Lab2
+Lab3/*.csv
