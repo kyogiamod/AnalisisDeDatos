@@ -1,0 +1,16 @@
+"rules" "support" "confidence" "lift" "count"
+"{Magnesium.bajo=0,Magnesium.medio=0} => {Magnesium.alto=1}" 0.0337078651685393 1 29.6666666666667 6
+"{Class.identifier=2,Proanthocyanidins.alto=1,Proline.medio=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Proanthocyanidins.alto=1,Color.bajo=1,Proline.medio=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Proanthocyanidins.alto=1,Color.medio=0,Proline.medio=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Magnesium.bajo=0,nonFlavanoids.medio=1,Proanthocyanidins.alto=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Class.identifier=2,Proanthocyanidins.alto=1,Proline.bajo=0} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Class.identifier=2,Proanthocyanidins.alto=1,Hue.medio=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Class.identifier=2,Malic.bajo=1,Proanthocyanidins.alto=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Proanthocyanidins.alto=1,Color.bajo=1,Proline.bajo=0} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Proanthocyanidins.alto=1,Color.medio=0,Proline.bajo=0} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Magnesium.bajo=0,nonFlavanoids.bajo=0,Proanthocyanidins.alto=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Magnesium.bajo=0,Magnesium.medio=0,Proanthocyanidins.alto=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Proanthocyanidins.alto=1,Color.bajo=1,Hue.medio=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Malic.bajo=1,Proanthocyanidins.alto=1,Color.bajo=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
+"{Proanthocyanidins.alto=1,Color.medio=0,Hue.medio=1} => {Magnesium.alto=1}" 0.0112359550561798 1 29.6666666666667 2
