@@ -150,3 +150,11 @@ dev.off()
 jpeg("img/TwoKeyPlotLogical.jpeg")
 plot(rules, method="two-key plot")
 dev.off()
+
+rules.sop <- sort(rules, by="support")
+rules.conf <- sort(rules, by="confidence")
+rules.lift <- sort(rules, by="lift")
+
+write(head(rules.sop, 15), file="LogicalRulesSop.csv", sep=" ", row.names=FALSE)
+write(head(rules.conf, 15), file="LogicalRulesConf.csv", sep=" ", row.names=FALSE)
+write(head(rules.lift, 15), file="LogicalRulesLift.csv", sep=" ", row.names=FALSE)
