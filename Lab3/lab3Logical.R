@@ -116,27 +116,37 @@ for(i in 1:length(data[[1]]))
 
 data$Class.identifier <- as.factor(data$Class.identifier)
 data$Alcohol <- as.factor(alcohol)
-data$Malic.acid <- as.factor(malic)
+data$Malic.acid <- NULL
+data$Malic <- as.factor(malic)
 data$Ash <- as.factor(ash)
-data$Alkalinity.of.ash <- as.factor(alkalinity)
+data$Alkalinity.of.ash <- NULL
+data$Alkalinity <- as.factor(alkalinity)
 data$Magnesium <- as.factor(magnesium)
-data$Total.phenols <- as.factor(total_phenols)
+data$Total.phenols <- NULL
+data$Totalp <- as.factor(total_phenols)
 data$Flavanoids <- as.factor(flavanoids)
-data$Nonflavanoid.phenols <- as.factor(nonflavanoids)
-data$Proanthocyanidins <- as.factor(proan)
-data$Color.intensity <- as.factor(color)
+data$Nonflavanoid.phenols <- NULL
+data$Nonf <- as.factor(nonflavanoids)
+data$Proanthocyanidins <- NULL
+data$Proan <- as.factor(proan)
+data$Color.intensity <- NULL
+data$Color <- as.factor(color)
 data$Hue <- as.factor(hue)
-data$OD280.OD315.of.diluted.wines <- as.factor(OD280)
+data$OD280.OD315.of.diluted.wines <- NULL
+data$OD280 <- as.factor(OD280)
 data$Proline <- as.factor(proline)
 
 levels(data$Class.identifier) <- factor(c("1", "2", "3"))
 
-rules <- apriori(as(data, "transactions"), parameter = list(minlen=2, support=0.01, confidence=0.5, maxlen=5))
+rules <- apriori(   as(data, "transactions"), 
+                    parameter = list(minlen=2, support=0.01, confidence=0.5, maxlen=5), 
+                    appearance=list(rhs=c("Class.identifier=1", "Class.identifier=2", "Class.identifier=3"))
+                )
 rules.sop <- sort(rules, by="support")
 rules.conf <- sort(rules, by="confidence")
 rules.lift <- sort(rules, by="lift")
 
-write(rules, file="AsotiationRulesLogical.csv", sep=",", quote=TRUE, row.names=FALSE)
+#write(rules, file="AsotiationRulesLogical.csv", sep=",", quote=TRUE, row.names=FALSE)
 
 jpeg("img/matrixGroupedLogical.jpeg")
 plot(rules, method="grouped")
@@ -150,11 +160,14 @@ dev.off()
 jpeg("img/TwoKeyPlotLogical.jpeg")
 plot(rules, method="two-key plot")
 dev.off()
+jpeg("img/plotLogicalmethod.jpeg")
+plot(rules, method="graph")
+dev.off()
 
 rules.sop <- sort(rules, by="support")
 rules.conf <- sort(rules, by="confidence")
 rules.lift <- sort(rules, by="lift")
 
-write(head(rules.sop, 15), file="LogicalRulesSop.csv", sep=" ", row.names=FALSE)
-write(head(rules.conf, 15), file="LogicalRulesConf.csv", sep=" ", row.names=FALSE)
-write(head(rules.lift, 15), file="LogicalRulesLift.csv", sep=" ", row.names=FALSE)
+#write(head(rules.sop, 15), file="csv/LogicalRulesSop.csv", sep=" ", row.names=FALSE)
+#write(head(rules.conf, 15), file="csv/LogicalRulesConf.csv", sep=" ", row.names=FALSE)
+write(head(rules.lift, 15), file="csv/LogicalRulesLift2.csv", sep=" ", row.names=FALSE)

@@ -1,16 +1,16 @@
-"rules" "support" "confidence" "lift" "count"
-"{Magnesium=FALSE} => {Alkalinity.of.ash=FALSE}" 1 1 1 178
-"{Alkalinity.of.ash=FALSE} => {Magnesium=FALSE}" 1 1 1 178
-"{Magnesium=FALSE} => {Ash=FALSE}" 1 1 1 178
-"{Ash=FALSE} => {Magnesium=FALSE}" 1 1 1 178
-"{Magnesium=FALSE} => {Alcohol=FALSE}" 1 1 1 178
-"{Alcohol=FALSE} => {Magnesium=FALSE}" 1 1 1 178
-"{Alkalinity.of.ash=FALSE} => {Ash=FALSE}" 1 1 1 178
-"{Ash=FALSE} => {Alkalinity.of.ash=FALSE}" 1 1 1 178
-"{Alkalinity.of.ash=FALSE} => {Alcohol=FALSE}" 1 1 1 178
-"{Alcohol=FALSE} => {Alkalinity.of.ash=FALSE}" 1 1 1 178
-"{Ash=FALSE} => {Alcohol=FALSE}" 1 1 1 178
-"{Alcohol=FALSE} => {Ash=FALSE}" 1 1 1 178
-"{Alkalinity.of.ash=FALSE,Magnesium=FALSE} => {Ash=FALSE}" 1 1 1 178
-"{Ash=FALSE,Magnesium=FALSE} => {Alkalinity.of.ash=FALSE}" 1 1 1 178
-"{Ash=FALSE,Alkalinity.of.ash=FALSE} => {Magnesium=FALSE}" 1 1 1 178
+\{Magnesium=FALSE\}&\{Alkalinity.of.ash=FALSE\}&1&1&1&178\\ \hline
+\{Alkalinity.of.ash=FALSE\}&\{Magnesium=FALSE\}&1&1&1&178\\ \hline
+\{Magnesium=FALSE\}&\{Ash=FALSE\}&1&1&1&178\\ \hline
+\{Ash=FALSE\}&\{Magnesium=FALSE\}&1&1&1&178\\ \hline
+\{Magnesium=FALSE\}&\{Alcohol=FALSE\}&1&1&1&178\\ \hline
+\{Alcohol=FALSE\}&\{Magnesium=FALSE\}&1&1&1&178\\ \hline
+\{Alkalinity.of.ash=FALSE\}&\{Ash=FALSE\}&1&1&1&178\\ \hline
+\{Ash=FALSE\}&\{Alkalinity.of.ash=FALSE\}&1&1&1&178\\ \hline
+\{Alkalinity.of.ash=FALSE\}&\{Alcohol=FALSE\}&1&1&1&178\\ \hline
+\{Alcohol=FALSE\}&\{Alkalinity.of.ash=FALSE\}&1&1&1&178\\ \hline
+\{Ash=FALSE\}&\{Alcohol=FALSE\}&1&1&1&178\\ \hline
+\{Alcohol=FALSE\}&\{Ash=FALSE\}&1&1&1&178\\ \hline
+\{Alkalinity.of.ash=FALSE,Magnesium=FALSE\}&\{Ash=FALSE\}&1&1&1&178\\ \hline
+\{Ash=FALSE,Magnesium=FALSE\}&\{Alkalinity.of.ash=FALSE\}&1&1&1&178\\ \hline
+\{Ash=FALSE,Alkalinity.of.ash=FALSE\}&\{Magnesium=FALSE\}&1&1&1&178\\ \hline
+\\ \hline

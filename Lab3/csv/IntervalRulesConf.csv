@@ -1,16 +1,16 @@
-"rules" "support" "confidence" "lift" "count"
-"{Magnesium.alto=1} => {Magnesium.bajo=0}" 0.0337078651685393 1 2.28205128205128 6
-"{Magnesium.alto=1} => {Magnesium.medio=0}" 0.0337078651685393 1 1.67924528301887 6
-"{Magnesium.alto=1} => {Malic.bajo=1}" 0.0337078651685393 1 1.56140350877193 6
-"{Magnesium.alto=1} => {Hue.bajo=0}" 0.0337078651685393 1 1.54782608695652 6
-"{Magnesium.alto=1} => {OD280.bajo=0}" 0.0337078651685393 1 1.44715447154472 6
-"{Magnesium.alto=1} => {Malic.medio=0}" 0.0337078651685393 1 1.37984496124031 6
-"{Magnesium.alto=1} => {Malic.alto=0}" 0.0337078651685393 1 1.0920245398773 6
-"{Magnesium.alto=1} => {Color.alto=0}" 0.0337078651685393 1 1.07878787878788 6
-"{Magnesium.alto=1} => {Flavanoids.alto=0}" 0.0337078651685393 1 1.05325443786982 6
-"{Flavanoids.alto=1} => {Flavanoids.medio=0}" 0.050561797752809 1 2.04597701149425 9
-"{Flavanoids.alto=1} => {Proanthocyanidins.bajo=0}" 0.050561797752809 1 1.87368421052632 9
-"{Flavanoids.alto=1} => {Flavanoids.bajo=0}" 0.050561797752809 1 1.78 9
-"{Flavanoids.alto=1} => {Malic.bajo=1}" 0.050561797752809 1 1.56140350877193 9
-"{Flavanoids.alto=1} => {Total.phenols.bajo=0}" 0.050561797752809 1 1.49579831932773 9
-"{Flavanoids.alto=1} => {OD280.bajo=0}" 0.050561797752809 1 1.44715447154472 9
+\{Magnesium.alto=1\}&\{Magnesium.bajo=0\}&0.0337&1&2.28&6\\ \hline\\ \hline
+\{Magnesium.alto=1\}&\{Magnesium.medio=0\}&0.0337&1&1.67&6\\ \hline
+\{Magnesium.alto=1\}&\{Malic.bajo=1\}&0.0337&1&1.56&6\\ \hline
+\{Magnesium.alto=1\}&\{Hue.bajo=0\}&0.0337&1&1.54&6\\ \hline
+\{Magnesium.alto=1\}&\{OD280.bajo=0\}&0.0337&1&1.44&6\\ \hline
+\{Magnesium.alto=1\}&\{Malic.medio=0\}&0.0337&1&1.37&6\\ \hline
+\{Magnesium.alto=1\}&\{Malic.alto=0\}&0.0337&1&1.0&6\\ \hline
+\{Magnesium.alto=1\}&\{Color.alto=0\}&0.0337&1&1.07&6\\ \hline
+\{Magnesium.alto=1\}&\{Flavanoids.alto=0\}&0.0337&1&1.05&6\\ \hline
+\{Flavanoids.alto=1\}&\{Flavanoids.medio=0\}&0.050&1&2.04&9\\ \hline
+\{Flavanoids.alto=1\}&\{Proanthocyanidins.bajo=0\}&0.050&1&1.87&9\\ \hline
+\{Flavanoids.alto=1\}&\{Flavanoids.bajo=0\}&0.050&1&1.78&9\\ \hline
+\{Flavanoids.alto=1\}&\{Malic.bajo=1\}&0.050&1&1.56&9\\ \hline
+\{Flavanoids.alto=1\}&\{Total.phenols.bajo=0\}&0.050&1&1.49&9\\ \hline
+\{Flavanoids.alto=1\}&\{OD280.bajo=0\}&0.050&1&1.44&9\\ \hline
+\\ \hline

@@ -1,16 +1,16 @@
-"rules" "support" "confidence" "lift" "count"
-"{Malic.acid=FALSE,Total.phenols=TRUE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0168539325842697 1 22.25 3
-"{Class.identifier=3,Malic.acid=TRUE,Nonflavanoid.phenols=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0112359550561798 1 22.25 2
-"{Class.identifier=3,Malic.acid=FALSE,Total.phenols=TRUE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0168539325842697 1 22.25 3
-"{Malic.acid=FALSE,Total.phenols=TRUE,Color.intensity=FALSE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0112359550561798 1 22.25 2
-"{Malic.acid=FALSE,Total.phenols=TRUE,Proanthocyanidins=TRUE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0168539325842697 1 22.25 3
-"{Malic.acid=FALSE,Total.phenols=TRUE,Hue=TRUE,Proline=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0168539325842697 1 22.25 3
-"{Malic.acid=FALSE,Total.phenols=TRUE,Flavanoids=TRUE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0168539325842697 1 22.25 3
-"{Malic.acid=FALSE,Total.phenols=TRUE,Nonflavanoid.phenols=FALSE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0112359550561798 1 22.25 2
-"{Malic.acid=FALSE,Magnesium=FALSE,Total.phenols=TRUE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0168539325842697 1 22.25 3
-"{Malic.acid=FALSE,Alkalinity.of.ash=FALSE,Total.phenols=TRUE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0168539325842697 1 22.25 3
-"{Malic.acid=FALSE,Ash=FALSE,Total.phenols=TRUE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0168539325842697 1 22.25 3
-"{Alcohol=FALSE,Malic.acid=FALSE,Total.phenols=TRUE,Hue=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0168539325842697 1 22.25 3
-"{Class.identifier=3,Malic.acid=TRUE,Nonflavanoid.phenols=TRUE,Proanthocyanidins=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0112359550561798 1 22.25 2
-"{Class.identifier=3,Malic.acid=TRUE,Nonflavanoid.phenols=TRUE,Proline=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0112359550561798 1 22.25 2
-"{Class.identifier=3,Malic.acid=TRUE,Flavanoids=TRUE,Nonflavanoid.phenols=TRUE} => {OD280.OD315.of.diluted.wines=TRUE}" 0.0112359550561798 1 22.25 2
+\{Malic.acid=FALSE,Total.phenols=TRUE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01685&1&22.25&3\\ \hline
+\{Class.identifier=3,Malic.acid=TRUE,Nonflavanoid.phenols=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01123&1&22.25&2\\ \hline
+\{Class.identifier=3,Malic.acid=FALSE,Total.phenols=TRUE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01685&1&22.25&3\\ \hline
+\{Malic.acid=FALSE,Total.phenols=TRUE,Color.intensity=FALSE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01123&1&22.25&2\\ \hline
+\{Malic.acid=FALSE,Total.phenols=TRUE,Proanthocyanidins=TRUE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01685&1&22.25&3\\ \hline
+\{Malic.acid=FALSE,Total.phenols=TRUE,Hue=TRUE,Proline=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01685&1&22.25&3\\ \hline
+\{Malic.acid=FALSE,Total.phenols=TRUE,Flavanoids=TRUE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01685&1&22.25&3\\ \hline
+\{Malic.acid=FALSE,Total.phenols=TRUE,Nonflavanoid.phenols=FALSE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01123&1&22.25&2\\ \hline
+\{Malic.acid=FALSE,Magnesium=FALSE,Total.phenols=TRUE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01685&1&22.25&3\\ \hline
+\{Malic.acid=FALSE,Alkalinity.of.ash=FALSE,Total.phenols=TRUE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01685&1&22.25&3\\ \hline
+\{Malic.acid=FALSE,Ash=FALSE,Total.phenols=TRUE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01685&1&22.25&3\\ \hline
+\{Alcohol=FALSE,Malic.acid=FALSE,Total.phenols=TRUE,Hue=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01685&1&22.25&3\\ \hline
+\{Class.identifier=3,Malic.acid=TRUE,Nonflavanoid.phenols=TRUE,Proanthocyanidins=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01123&1&22.25&2\\ \hline
+\{Class.identifier=3,Malic.acid=TRUE,Nonflavanoid.phenols=TRUE,Proline=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01123&1&22.25&2\\ \hline
+\{Class.identifier=3,Malic.acid=TRUE,Flavanoids=TRUE,Nonflavanoid.phenols=TRUE\}&\{OD280.OD315.of.diluted.wines=TRUE\}&0.01123&1&22.25&2\\ \hline
+\\ \hline
